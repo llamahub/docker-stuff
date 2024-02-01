@@ -31,6 +31,15 @@ docker run -d ^
 https://www.youtube.com/watch?v=b1QREIsTgok
 
 
+[ Nginx Proxy Manager ]
+================================================================================
+## Nginx Proxy Manager On Docker On Dockge On Windows
+https://www.youtube.com/watch?v=FUqpIsNP7Js
+
+
+https://www.instructables.com/Quick-and-Dirty-Dynamic-DNS-Using-GoDaddy/
+https://github.com/navilg/godaddy-ddns
+
 
 [ NextCloud AIO ] Next Cloud All-in-One
 ================================================================================
@@ -41,11 +50,3 @@ https://github.com/nextcloud/all-in-one#how-to-run-aio-on-windows
 ## Nextcloud All In One Commands from my youtube video! youtube.com/@kltechvideos
 https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Nextcloud%20All%20In%20One
 
-[ Nginx Proxy Manager ]
-================================================================================
-## Nginx Proxy Manager On Docker On Dockge On Windows
-https://www.youtube.com/watch?v=FUqpIsNP7Js
-
-
-https://www.instructables.com/Quick-and-Dirty-Dynamic-DNS-Using-GoDaddy/
-https://github.com/navilg/godaddy-ddns
