@@ -4,9 +4,9 @@ services:
     image: gotson/komga
     container_name: komga
     volumes:
-      - E:\My Data\Keith\Documents\Docker Stuff\Komga\Config:/config
-      - E:\My Data\Keith\Documents\Docker Stuff\Komga\Data:/data
-      - E:\My Data\Keith\Documents\Docker Stuff\Komga\Books:/data/books
+      - C:\dev\docker-stuff_config\Komga\Config:/config
+      - C:\dev\docker-stuff_config\Komga\Data:/data
+      - C:\dev\docker-stuff_config\Komga\Books:/data/books
     ports:
       - 25600:25600
     user: 1000:1000

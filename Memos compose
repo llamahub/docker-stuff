@@ -12,7 +12,7 @@ services:
           memory: 1024M
     container_name: memos
     volumes:
-      - E:\My Data\Keith\Documents\Docker Stuff\Memos\Data:/var/opt/memos
+      - C:\dev\docker-stuff_config\Memos\Data:/var/opt/memos
     ports:
       - 5230:5230
 

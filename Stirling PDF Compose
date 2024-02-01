@@ -16,10 +16,10 @@ services:
     ports:
       - '9666:8080'
     volumes:
-      - C:\Users\keith\Documents\Docker Stuff\Stirling PDF\trainingData:/usr/share/tesseract-ocr/5/tessdata  # Required for extra OCR languages
-      - C:\Users\keith\Documents\Docker Stuff\Stirling PDF\extraConfigs:/configs
-      - C:\Users\keith\Documents\Docker Stuff\Stirling PDF\customFiles:/customFiles/
-      - C:\Users\keith\Documents\Docker Stuff\Stirling PDF\logs:/logs/
+      - C:\dev\docker-stuff_config\Stirling PDF\trainingData:/usr/share/tesseract-ocr/5/tessdata  # Required for extra OCR languages
+      - C:\dev\docker-stuff_config\Stirling PDF\extraConfigs:/configs
+      - C:\dev\docker-stuff_config\Stirling PDF\customFiles:/customFiles/
+      - C:\dev\docker-stuff_config\Stirling PDF\logs:/logs/
     environment:
       - DOCKER_ENABLE_SECURITY=true  # Required for authentication
       - SECURITY_ENABLE_LOGIN=true   # Required for authentication

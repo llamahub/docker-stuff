@@ -1,7 +1,7 @@
 Nextcloud All In One Commands from my youtube video! youtube.com/@kltechvideos
 
 VOlume 1 (Don't forget to amend to your path!) My path was:
-E:\My Data\Keith\Documents\Docker Stuff\NextcloudAIO\Data DIR 
+C:\dev\docker-stuff_config\NextcloudAIO\Data DIR 
 Pasted into windows command prompt!
 #-----------Do not copy this line, copy whats underneath!-----------
 docker volume create ^
@@ -13,7 +13,7 @@ docker volume create ^
 
 
 Volume 2 (Don't forget to amend to your path!) My path was:
-E:\My Data\Keith\Documents\Docker Stuff\NextcloudAIO\Backup DIR
+C:\dev\docker-stuff_config\NextcloudAIO\Backup DIR
 Pasted into windows command prompt!
 #-----------Do not copy this line, copy whats underneath!-----------
 docker volume create ^

@@ -20,9 +20,9 @@ services:
           memory: 1024M
     restart: unless-stopped
     volumes:
-      - C:\Users\keith\Documents\Docker Stuff\Homarr\config:/app/data/configs
-      - C:\Users\keith\Documents\Docker Stuff\Homarr\data:/data
-      - C:\Users\keith\Documents\Docker Stuff\Homarr\icons:/app/public/icons
+      - C:\dev\docker-stuff_config\Homarr\config:/app/data/configs
+      - C:\dev\docker-stuff_config\Homarr\data:/data
+      - C:\dev\docker-stuff_config\Homarr\icons:/app/public/icons
       #- /var/run/docker.sock:/var/run/docker.sock:ro # (optional) For docker integrations
     ports:
       - 9222:7575
