@@ -1,25 +1,25 @@
 Nextcloud All In One Commands from my youtube video! youtube.com/@kltechvideos
 
 VOlume 1 (Don't forget to amend to your path!) My path was:
-C:\dev\docker-stuff_config\NextcloudAIO\Data DIR 
+C:\dev\docker-stuff_config\NextCloudAIO\Data
 Pasted into windows command prompt!
 #-----------Do not copy this line, copy whats underneath!-----------
 docker volume create ^
 --driver local ^
 --name nextcloud_aio_nextcloud_datadir ^
--o device="/host_mnt/e/My Data/Keith/Documents/Docker Stuff/NextcloudAIO/Data DIR" ^
+-o device="/host_mnt/c/dev/docker-stuff_config/NextCloudAIO/Data" ^
 -o type="none" ^
 -o o="bind"
 
 
 Volume 2 (Don't forget to amend to your path!) My path was:
-C:\dev\docker-stuff_config\NextcloudAIO\Backup DIR
+C:\dev\docker-stuff_config\NextCloudAIO\Backup
 Pasted into windows command prompt!
 #-----------Do not copy this line, copy whats underneath!-----------
 docker volume create ^
 --driver local ^
 --name nextcloud_aio_backupdir ^
--o device="/host_mnt/e/My Data/Keith/Documents/Docker Stuff/NextcloudAIO/Backup DIR" ^
+-o device="/host_mnt/c/dev/docker-stuff_config/NextCloudAIO/Backup" ^
 -o type="none" ^
 -o o="bind"
 
