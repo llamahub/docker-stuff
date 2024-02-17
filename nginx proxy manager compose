@@ -28,7 +28,6 @@ services:
       - npmletsencrypt:/etc/letsencrypt
     depends_on:
       - db
-
   db:
     image: jc21/mariadb-aria:latest
     networks:
@@ -49,7 +48,6 @@ services:
       MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD}
     volumes:
       - npmdb:/var/lib/mysql
-
 networks:
   npm:
     driver: bridge
@@ -58,8 +56,7 @@ networks:
       config:
         - subnet: 172.22.0.0/24
           gateway: 172.22.0.1
-
 volumes:
-  npmapp:
-  npmdb:
-  npmletsencrypt:
+  npmapp: null
+  npmdb: null
+  npmletsencrypt: null
