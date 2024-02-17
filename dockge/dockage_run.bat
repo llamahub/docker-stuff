@@ -1,11 +1,11 @@
-Here are the commands for the Dockge Video.
-(A BUG IN THE PROJECT IS CURRENTLY BEING LOOKED INTO, PLEASE USE THE NIGHTLY VERSION - SHOULD BE OKAY AFTER VERSION 1.4.2 THEN YOU CAN GO BACK TO VERSION 1 TAG)
+REM -- Here are the commands for the Dockge Video.
+REM -- (A BUG IN THE PROJECT IS CURRENTLY BEING LOOKED INTO, PLEASE USE THE NIGHTLY VERSION - SHOULD BE OKAY AFTER VERSION 1.4.2 THEN YOU CAN GO BACK TO VERSION 1 TAG)
 
-First create the docker network Dockge paste this into windows command prompt:
+REM -- First create the docker network Dockge paste this into windows command prompt:
 
 docker network create --subnet=175.1.1.2/24 --gateway=175.1.1.1 Dockge
 
-This is the nightly run command. See message at the top.
+REM -- This is the nightly run command. See message at the top.
 
 docker run -d ^
   --restart=always ^
@@ -18,7 +18,7 @@ docker run -d ^
   -v="/var/run/docker.sock:/var/run/docker.sock" ^
   louislam/dockge:nightly
 
-The in windows command prompt paste this run command (Don't forget to modify the volume directories below to match your own paths just don't modify after the :.
+REM -- The in windows command prompt paste this run command (Don't forget to modify the volume directories below to match your own paths just don't modify after the :.
 
 docker run -d ^
   --restart=always ^
@@ -31,6 +31,6 @@ docker run -d ^
   -v="/var/run/docker.sock:/var/run/docker.sock" ^
   louislam/dockge:1
 
-After a few minutes Dockge will be running.
+REM -- After a few minutes Dockge will be running.
 
-In our video we used the latest tag but the developer recommends the :1 tag so we put that above.
+REM -- In our video we used the latest tag but the developer recommends the :1 tag so we put that above.
