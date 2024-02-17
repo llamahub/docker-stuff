@@ -2,35 +2,29 @@
 ================================================================================
 
 [ Dockage ]
-================================================================================## Install Dockge A Docker Companion On Windows!
+================================================================================
+## Install Dockge A Docker Companion On Windows!
 https://www.youtube.com/watch?v=lEwEgR-nja4&t=0s
 https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Dockge%20run%20command
 
 
-## 1. Create network:
+### Create network:
+Use [./dockge/dockage_create_network.bat](./dockge/dockage_create_network.bat)
+
 ```
 C:\dev\dockge>docker network create --subnet=175.1.1.2/24 --gateway=175.1.1.1 Dockge
 ```
 
-## 2. Run dockge container
-```
-docker run -d ^
-  --restart=always ^
-  --name="dockge-container" ^
-  --network=Dockge ^
-  --ip="175.1.1.3" ^
-  -p=9333:5001 ^
-  -v="C:\dev\docker-stuff\Dockge\app:/app/data" ^
-  -v="C:\dev\docker-stuff\Dockge\opt:/opt/stacks" ^
-  -v="/var/run/docker.sock:/var/run/docker.sock" ^
-  louislam/dockge:1
-```
+### Run dockge container
+
+Use [./dockge/dockage_run.bat](./dockge/dockage_run.bat)
 
 [ Homarr ]
 ================================================================================
 ## Install Homarr On Docker On Windows Using Dockge
 https://www.youtube.com/watch?v=b1QREIsTgok
 
+Use [./homarr/compose.yaml](./homarr/compose.yaml)
 
 [ Nginx Proxy Manager ]
 ================================================================================
@@ -42,7 +36,7 @@ https://www.instructables.com/Quick-and-Dirty-Dynamic-DNS-Using-GoDaddy/
 https://github.com/navilg/godaddy-ddns
 
 
-## FIX for Issue with certbot when creating SSL certificate - log into terminal on nginx-proxy-manager container
+### FIX for Issue with certbot when creating SSL certificate - log into terminal on nginx-proxy-manager container
 ```
 # cd /opt/certbot
 # /opt/certbot/bin/pip install acme==1.32.0
@@ -84,7 +78,6 @@ No renewals were attempted.
 #
 ```
 
-
 [ NextCloud AIO ] Next Cloud All-in-One
 ================================================================================
 ## Nextcloud All In One On Docker On Windows Using Dockge
@@ -98,7 +91,7 @@ https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Nextcloud%20All%20In%2
 - http://api.godaddy.com
 - forward cloud.santeeplace.com to ext ip address (https://whatismyipaddress.com/)
 
-### npm : Add SSL Certificate
+### npm : Add SSL Certificate in Nginx Proxy Manager
 - domain name = cloud.santeplace.com
 - Use DNS Challenge
 - GoDaddy: http://api.godaddy.com (key + secret)
@@ -116,6 +109,12 @@ client_max_body_size 0;
 ```
 
 ### Create data mounts
+
+Use [./nextcloud-aio/create_vols.bat](./nextcloud-aio/create_vols.bat)
+
+### Dockge: start up services
+
+Use [./nextcloud-aio/compose.yaml](./nextcloud-aio/compose.yaml)
 
 ### run occ scan to pick up files added directly to files folders
 
