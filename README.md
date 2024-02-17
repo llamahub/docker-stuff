@@ -102,11 +102,8 @@ https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Nextcloud%20All%20In%2
 - websockets support
 - SSL: Pick the certificate, Force SSL, HTTP2 Support
 - Advanced:
-```
-client_body_buffer_size 512k;
-proxy_read_timeout 86400s;
-client_max_body_size 0;
-```
+
+Use [./nextcloud-aio/nginx_proxy_manager.config](./nextcloud-aio/nginx_proxy_manager.config)
 
 ### Create data mounts
 
