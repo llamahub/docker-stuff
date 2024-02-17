@@ -93,7 +93,31 @@ https://github.com/nextcloud/all-in-one#how-to-run-aio-on-windows
 ## Nextcloud All In One Commands from my youtube video! youtube.com/@kltechvideos
 https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Nextcloud%20All%20In%20One
 
+### route subdomain
 - http://api.godaddy.com
-- forward
+- forward cloud.santeeplace.com to ext ip address (https://whatismyipaddress.com/)
 
+### npm : Add SSL Certificate
+- domain name = cloud.santeplace.com
+- Use DNS Challenge
+- GoDaddy: http://api.godaddy.com (key + secret)
 
+### npm : New Proxy Host
+- http : internal IP : port = 11000
+- block common exploits
+- websockets support
+- SSL: Pick the certificate, Force SSL, HTTP2 Support
+- Advanced:
+```
+client_body_buffer_size 512k;
+proxy_read_timeout 86400s;
+client_max_body_size 0;
+```
+
+### Create data mounts
+
+### run occ scan to pick up files added directly to files folders
+
+```
+docker exec -ti --user www-data nextcloud-aio-nextcloud /var/www/html/occ files:scan --all
+```
