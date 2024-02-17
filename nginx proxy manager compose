@@ -19,7 +19,7 @@ services:
       DB_MYSQL_HOST: db
       DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: npm
-      DB_MYSQL_PASSWORD: HUpuU4qPAf6fe
+      DB_MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD}
       DB_MYSQL_NAME: npm
       # Uncomment this if IPv6 is not enabled on your host
       # DISABLE_IPV6: 'true'
@@ -43,10 +43,10 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: Qdtu2YvAdOZ9i1Lv
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: npm
       MYSQL_USER: npm
-      MYSQL_PASSWORD: HUpuU4qPAf6fe
+      MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD}
     volumes:
       - npmdb:/var/lib/mysql
 
