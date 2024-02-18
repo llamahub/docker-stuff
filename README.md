@@ -89,7 +89,7 @@ https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Nextcloud%20All%20In%2
 
 ### route subdomain
 - http://api.godaddy.com
-- forward cloud.santeeplace.com to ext ip address (https://whatismyipaddress.com/)
+- add "A" record for cloud.santeeplace.com to ext ip address (https://whatismyipaddress.com/)
 
 ### npm : Add SSL Certificate in Nginx Proxy Manager
 - domain name = cloud.santeplace.com
