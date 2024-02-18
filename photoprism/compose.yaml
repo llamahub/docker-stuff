@@ -84,9 +84,8 @@ services:
     working_dir: /photoprism # do not change or remove
     ## Storage Folders: use "/" not "\" as separator, "~" is a shortcut for C:/user/{username}, "." for the current directory
     volumes:
-      - Y:/.:/photoprism/originals/dksantee:ro # Google Drive
-      - X:/.:/photoprism/originals/6tigersrds:ro # Google Drive
-      - D:/NextcloudAIO/Data/rex/files/Photos:/photoprism/originals/rex:ro
+      - D:/Photos:/photoprism/import/D-Photos
+      - D:/PhotoPrism/originals:/photoprism/originals
       - D:/PhotoPrism/storage:/photoprism/storage # *writable* storage folder for cache, database, and sidecar files (never remove)
   ## Database Server (recommended)
   ## see https://docs.photoprism.app/getting-started/faq/#should-i-use-sqlite-mariadb-or-mysql
