@@ -5,6 +5,7 @@ services:
     restart: always
     container_name: nextcloud-aio-mastercontainer # This line is not allowed to be changed as otherwise AIO will not work correctly
     volumes:
+      - nextcloud_aio_external_local:/external
       - nextcloud_aio_mastercontainer:/mnt/docker-aio-config # This line is not allowed to be changed as otherwise the built-in backup solution will not work
       - //var/run/docker.sock:/var/run/docker.sock:ro # May be changed on macOS, Windows, or docker rootless. See the applicable documentation. If adjusting, don't forget to also set 'WATCHTOWER_DOCKER_SOCKET_PATH'!
     ports:
@@ -19,6 +20,7 @@ services:
       - NEXTCLOUD_UPLOAD_LIMIT=20G # Can be adjusted if you need more. See https://github.com/nextcloud/all-in-one#how-to-adjust-the-upload-limit-for-nextcloud
       - NEXTCLOUD_MAX_TIME=3000 # Can be adjusted if you need more. See https://github.com/nextcloud/all-in-one#how-to-adjust-the-max-execution-time-for-nextcloud
       - NEXTCLOUD_MEMORY_LIMIT=2024M # Can be adjusted if you need more. See https://github.com/nextcloud/all-in-one#how-to-adjust-the-php-memory-limit-for-nextcloud
+      - NEXTCLOUD_MOUNT=nextcloud_aio_external_local
       # - NEXTCLOUD_TRUSTED_CACERTS_DIR=/path/to/my/cacerts # CA certificates in this directory will be trusted by the OS of the Nextcloud container (Useful e.g. for LDAPS) See https://github.com/nextcloud/all-in-one#how-to-trust-user-defined-certification-authorities-ca
       # - NEXTCLOUD_STARTUP_APPS=deck twofactor_totp tasks calendar contacts notes # Allows modifying the Nextcloud apps that are installed on starting AIO the first time. See https://github.com/nextcloud/all-in-one#how-to-change-the-nextcloud-apps-that-are-installed-on-the-first-startup
       # - NEXTCLOUD_ADDITIONAL_APKS=imagemagick # This allows adding additional packages to the Nextcloud container permanently. Default is imagemagick but can be overwritten by modifying this value. See https://github.com/nextcloud/all-in-one#how-to-add-os-packages-permanently-to-the-nextcloud-container
@@ -37,5 +39,8 @@ services:
       # caddy:
       #
 volumes:
+  nextcloud_aio_external_local:
+    name: nextcloud_aio_external_local
   nextcloud_aio_mastercontainer:
     name: nextcloud_aio_mastercontainer
+networks: {}

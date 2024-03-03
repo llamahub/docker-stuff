@@ -22,3 +22,12 @@ docker volume create ^
 -o device="/host_mnt/d/NextCloudAIO/Backup" ^
 -o type="none" ^
 -o o="bind"
+
+REM -- Volume 3 (external local storge)
+REM -- #-----------Do not copy this line, copy whats underneath!-----------
+docker volume create ^
+--driver local ^
+--name nextcloud_aio_external_local ^
+-o device="/host_mnt/d/" ^
+-o type="none" ^
+-o o="bind"

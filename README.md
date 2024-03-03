@@ -118,3 +118,8 @@ Use [./nextcloud-aio/compose.yaml](./nextcloud-aio/compose.yaml)
 ```
 docker exec -ti --user www-data nextcloud-aio-nextcloud /var/www/html/occ files:scan --all
 ```
+
+
+### Set up local external storage
+
+https://www.reddit.com/r/NextCloud/comments/136bgvb/trying_to_get_external_storage_local_to_work_with/
