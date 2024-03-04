@@ -107,6 +107,7 @@ Use [./nextcloud-aio/nginx_proxy_manager.config](./nextcloud-aio/nginx_proxy_man
 
 ### Create data mounts
 
+Note: These directories must exist or install will fail
 Use [./nextcloud-aio/create_vols.bat](./nextcloud-aio/create_vols.bat)
 
 ### Dockge: start up services
