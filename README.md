@@ -108,6 +108,7 @@ Use [./nextcloud-aio/nginx_proxy_manager.config](./nextcloud-aio/nginx_proxy_man
 ### Create data mounts
 
 Note: These directories must exist or install will fail
+Note: Also, it doesn't look like it works with USB drive - only SATA
 Use [./nextcloud-aio/create_vols.bat](./nextcloud-aio/create_vols.bat)
 
 ### Dockge: start up services
@@ -120,7 +121,20 @@ Use [./nextcloud-aio/compose.yaml](./nextcloud-aio/compose.yaml)
 docker exec -ti --user www-data nextcloud-aio-nextcloud /var/www/html/occ files:scan --all
 ```
 
+or run from inside nextcloud-aio-nextcloud container:
+
+```
+sudo -u www-data php occ files:scan --all
+```
+
 
 ### Set up local external storage
 
 https://www.reddit.com/r/NextCloud/comments/136bgvb/trying_to_get_external_storage_local_to_work_with/
+
+
+### Turn off Maintenance Mode
+
+```
+sudo -u www-data php occ maintenance:mode --off
+```

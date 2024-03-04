@@ -84,8 +84,8 @@ services:
     working_dir: /photoprism # do not change or remove
     ## Storage Folders: use "/" not "\" as separator, "~" is a shortcut for C:/user/{username}, "." for the current directory
     volumes:
-      - D:/NextcloudAIO/Data/rex/files/Photos:/photoprism/import/Rex
-      - E:/Photos:/photoprism/import/Extreme
+      - D:/Nextcloud_Data/rex/files/Photos:/photoprism/import/Rex
+      - D:/Santee/PhotoPrism-Import:/photoprism/import/Santee
       - D:/PhotoPrism/originals:/photoprism/originals
       - D:/PhotoPrism/storage:/photoprism/storage # *writable* storage folder for cache, database, and sidecar files (never remove)
   ## Database Server (recommended)

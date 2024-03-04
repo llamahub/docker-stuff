@@ -1,3 +1,4 @@
+# NOTE: Not using this anymore as decided I don't like it for photos
 version: "3.5"
 services:
   jellyfin:
