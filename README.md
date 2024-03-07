@@ -138,3 +138,8 @@ https://www.reddit.com/r/NextCloud/comments/136bgvb/trying_to_get_external_stora
 ```
 sudo -u www-data php occ maintenance:mode --off
 ```
+
+### Scan external folder
+```
+sudo -u www-data php occ files:scan --path="rex/files/Financial"
+```
