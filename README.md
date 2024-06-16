@@ -96,6 +96,12 @@ https://github.com/AmIBeingObtuse/Youtubestacks/blob/main/Nextcloud%20All%20In%2
 - Use DNS Challenge
 - GoDaddy: http://api.godaddy.com (key + secret)
 
+### DuckDNS DDNS
+- https://www.duckdns.org/
+- use intcatrex@gmail.com (goolge login)
+- install DuckDNS client: http://www.etx.ca/products/windows-applications/duckdns-update-client/#google_vignette (requires Java SE)
+
+
 ### npm : New Proxy Host
 - http : internal IP : port = 11000
 - block common exploits
@@ -143,3 +149,9 @@ sudo -u www-data php occ maintenance:mode --off
 ```
 sudo -u www-data php occ files:scan --path="rex/files/Financial"
 ```
+
+
+## Cloudfare usage
+
+https://www.youtube.com/watch?v=GarMdDTAZJo
+

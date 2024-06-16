@@ -1,0 +1,25 @@
+version: "3"
+services:
+  swag:
+    image: linuxserver/swag
+    container_name: swag
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000 # Adjust this to your user id
+      - PGID=1000 # Adjust this to your group id
+      - TZ=America/New_York # Adjust this to your timezone
+      - URL=santeeplace.com
+      - SUBDOMAINS=photos
+      - VALIDATION=godaddy
+      - EMAIL=${EMAIL}
+      - GODADDY_KEY=${GODADDY_API_KEY}
+      - GODADDY_SECRET${GODADDY_API_SECRET}
+    volumes:
+      - ./config:/config
+    ports:
+      - 443:443
+      - 80:80
+
+networks: {}

@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  mbsync:
+    image: cewood/mbsync:alpine_latest
+    container_name: mbsync
+    working_dir: /workdir
+    volumes:
+      - D:/Email/mbsync/data:/workdir/data
+      - D:/Email/mbsync/.mbsyncrc:/workdir/.mbsyncrc
+      - D:/Email/mbsync/crontab:/etc/crontab # Be sure to update the crontab with your command(s)
+    restart: unless-stopped
+    labels:
+      org.label-schema.group: backups
+networks: {}
