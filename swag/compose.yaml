@@ -12,14 +12,14 @@ services:
       - TZ=America/New_York # Adjust this to your timezone
       - URL=santeeplace.com
       - SUBDOMAINS=photos
+      - ONLY_SUBDOMAINS=true
       - VALIDATION=godaddy
       - EMAIL=${EMAIL}
       - GODADDY_KEY=${GODADDY_API_KEY}
       - GODADDY_SECRET${GODADDY_API_SECRET}
     volumes:
-      - ./config:/config
+      - C:\dev\docker-stuff_config\swag\config:/config
     ports:
       - 443:443
       - 80:80
-
 networks: {}
