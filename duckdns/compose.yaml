@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: duckdns
+    environment:
+      - PUID=1000 #optional
+      - PGID=1000 #optional
+      - TZ=America/New_York
+      - SUBDOMAINS=santeeplace
+      - TOKEN=${DUCKDNS_TOKEN}
+      - LOG_FILE=false #optional
+    volumes:
+      - C:\dev\docker-stuff_config\duckdns\config:/config
+    restart: unless-stopped
+networks: {}
